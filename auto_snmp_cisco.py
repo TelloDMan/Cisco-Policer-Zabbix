@@ -5,7 +5,7 @@ import re
 
 
 def start_snmp(IP,community):
-        #snmpwalk into the CI Router Policers
+        #snmpwalk into the Router Policers
         content = subprocess.run(["snmpwalk" ,"-v2c", "-c", community ,IP + ":161", "1.3.6.1.4.1.9.9.166.1.5.1.1.2"],capture_output=True)
 
         #split content
